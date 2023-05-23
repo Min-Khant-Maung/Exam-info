@@ -77,3 +77,5 @@ C:\Users\Min Khant Maung\source\repos\exam-info\exam-info\obj\Debug\netcoreapp3.
 C:\Users\Min Khant Maung\source\repos\exam-info\exam-info\obj\Debug\netcoreapp3.1\exam-info.pdb
 C:\Users\Min Khant Maung\source\repos\exam-info\exam-info\obj\Debug\netcoreapp3.1\exam-info.genruntimeconfig.cache
 C:\Users\Min Khant Maung\source\repos\exam-info\exam-info\obj\Debug\netcoreapp3.1\Razor\Views\Exam\List.cshtml.g.cs
+C:\Users\Min Khant Maung\source\repos\exam-info\exam-info\obj\Debug\netcoreapp3.1\Razor\Views\Exam\Edit.cshtml.g.cs
+C:\Users\Min Khant Maung\source\repos\exam-info\exam-info\obj\Debug\netcoreapp3.1\Razor\Views\Exam\Entry.cshtml.g.cs
