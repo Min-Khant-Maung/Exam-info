@@ -1,1 +1,94 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+
+        h1,form{
+            margin: 50px;
+        }
+    </style>
+    </head>
+
+<body>
+    <h1>Exam Info</h1>
+    <p value="@Model.Id" hidden></p>
+    <p value="@Model.Type" id="type" hidden></p>
+    <form action="/exam/Edit" method="POST">
+
+
+        <label for="" class="form-label">Name</label><br>
+        <div class="input-group mb-3">
+            <input type="text" name="name" class="form-control" placeholder="@Model.Name" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+        </div>
+
+
+        <label for="" class="form-label">Subject</label><br>
+        <div class="input-group mb-3">
+            <input name="subject" type="text" class="form-control" placeholder="@Model.Subject" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+        </div>
+
+
+        <label for="" class="form-label">Type</label><br>
+        <div class="input-group mb-3">
+            <select name="type" id="examType" class="form-select" aria-label="Default select example">
+
+              </select>
+        </div>
+
+        <label for="" class="form-label">Pass Marks</label><br>
+        <div class="input-group mb-3">
+            <input name="marks" type="number" class="form-control" placeholder="Pass Marks" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+        </div>
+
+
+        <label for="" class="form-label">Duration</label><br>
+        <div class="input-group mb-3">
+            <input name="duration" type="number" class="form-control" placeholder="Duration" aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+        </div>
+
+        
+   
+        <div class="mb-3">
+            <div class="row">
+                <div class="col">
+                    <input type="submit" class="btn btn-success" value="Edit">
+                </div>
+                <div class="col">
+                    <input type="reset" class="btn btn-secondary" value="Cancle">
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+
+<script>
+    let typeDropDown = document.getElementById("examType");
+    let examtype = document.getElementById("type");
+    let type = ["Tutorials", "Mid-Exam", "Final-Exam"];
+    for (let i = 0; i < type.length; i++) {
+        let option = document.createElement("option");
+        if(type[i]===examtype.innerText){
+            option.selected = true;
+        }
+        option.value = type[i];
+        option.text = type[i];
+        typeDropDown.appendChild(option);
+    }
+</script>
+
+</html>
